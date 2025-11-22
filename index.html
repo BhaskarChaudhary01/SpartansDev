@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpartanDev Agency</title>
+
+  <!-- AOS animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- small meta for mobile behavior -->
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <!-- Background video (replace assets/video.mp4) -->
+  <video class="bg-video" autoplay loop muted playsinline>
+    <source src="/Asset/3129902-uhd_3840_2160_25fps.mp4" type="video/mp4">
+  </video>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="brand">SpartanDev</div>
+    <nav class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-cta" id="diveBtnHeader">Dive</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner" data-aos="fade-up" data-aos-duration="1000">
+      <h1>We build modern web experiences</h1>
+      <p>Websites • UI/UX • Ecommerce • Branding</p>
+      <div class="hero-actions">
+        <button id="diveBtn" class="btn-primary">Dive</button>
+        <a class="btn-ghost" href="#portfolio">View Work</a>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section" data-aos="fade-up">
+    <h2>Portfolio</h2>
+
+    <div class="filter-controls">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="web">Web</button>
+      <button class="filter" data-filter="ecom">E-commerce</button>
+      <button class="filter" data-filter="ui">UI/UX</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- item: add/replace images in assets/ -->
+      <div class="portfolio-item web" data-title="Portfolio Website" data-aos="zoom-in">
+        <img src="/Asset/portfolio.jpg" alt="Portfolio website">
+        <div class="overlay">
+          <h3>Portfolio Website</h3>
+          <button class="view-btn">View</button>
+        </div>
+      </div>
+
+      <div class="portfolio-item ecom" data-title="E-Commerce Website" data-aos="zoom-in" data-aos-delay="100">
+        <img src="/Asset/ecom.jpg" alt="Ecommerce">
+        <div class="overlay">
+          <h3>E-Commerce Website</h3>
+          <button class="view-btn">View</button>
+        </div>
+      </div>
+
+      <div class="portfolio-item ui" data-title="UI/UX Case Study" data-aos="zoom-in" data-aos-delay="200">
+        <img src="/Asset/pexels-photo-5650043.jpeg" alt="UI/UX">
+        <div class="overlay">
+          <h3>UI/UX Design</h3>
+          <button class="view-btn">View</button>
+        </div>
+      </div>
+
+      <div class="portfolio-item web" data-title="Fitness Landing" data-aos="zoom-in" data-aos-delay="300">
+        <img src="/Asset/fitness.jpg" alt="Fitness">
+        <div class="overlay">
+          <h3>Fitness Landing Page</h3>
+          <button class="view-btn">View</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox (hidden by default) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button id="lightboxClose" class="lightbox-close">&times;</button>
+      <img id="lightboxImg" src="" alt="Preview">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="section" data-aos="fade-up">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Website Development</h3>
+        <p>Fast, responsive & SEO-ready websites.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>E-commerce</h3>
+        <p>Shops that convert and scale.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>UI / UX</h3>
+        <p>User-centered design & prototypes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section" data-aos="fade-up">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+      <div class="price-card" data-aos="flip-left">
+        <h3>Starter</h3>
+        <div class="price">₹9,999</div>
+        <ul>
+          <li>1 Page Website</li>
+          <li>Responsive</li>
+          <li>2 Days Delivery</li>
+        </ul>
+        <a class="btn-primary buy-btn" href="#" data-plan="Starter">Buy on WhatsApp</a>
+      </div>
+
+      <div class="price-card featured" data-aos="flip-left" data-aos-delay="100">
+        <h3>Business</h3>
+        <div class="price">₹24,999</div>
+        <ul>
+          <li>Up to 6 Pages</li>
+          <li>E-commerce Ready</li>
+          <li>5 Days Delivery</li>
+        </ul>
+        <a class="btn-primary buy-btn" href="#" data-plan="Business">Buy on WhatsApp</a>
+      </div>
+
+      <div class="price-card" data-aos="flip-left" data-aos-delay="200">
+        <h3>Premium</h3>
+        <div class="price">₹49,999</div>
+        <ul>
+          <li>Unlimited Pages</li>
+          <li>Custom Dashboard</li>
+          <li>10 Days Delivery</li>
+        </ul>
+        <a class="btn-primary buy-btn" href="#" data-plan="Premium">Buy on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <div class="testimonials-slider">
+      <div class="testimonial-slide active">
+        <p class="quote">"Amazing website delivered quickly — highly recommend!"</p>
+        <p class="who">— Rahul Verma, CEO</p>
+      </div>
+      <div class="testimonial-slide">
+        <p class="quote">"Sales increased after the new eCommerce design."</p>
+        <p class="who">— Pooja Enterprises</p>
+      </div>
+      <div class="testimonial-slide">
+        <p class="quote">"Responsive & helpful throughout the project"</p>
+        <p class="who">— Devansh Sharma</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About</h2>
+    <p class="about-text">SpartanDev builds fast, modern websites that convert. We combine design and engineering for measurable results.</p>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p style="text-align:center">Prefer a call? WhatsApp: <a id="whatsappLink" href="#">+91-9696364263</a></p>
+    <p style="text-align:center; margin-top:8px">Or use the DIVE button to open a contact form.</p>
+  </section>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> SpartanDev — All Rights Reserved</div>
+  </footer>
+
+  <!-- POPUP CONTACT FORM -->
+  <div id="contactModal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>Send a message</h3>
+      <form id="leadForm">
+        <label><input type="text" name="name" placeholder="Full name" required></label>
+        <label><input type="email" name="email" placeholder="Email" required></label>
+        <label><input type="tel" name="phone" placeholder="Phone (optional)"></label>
+        <label>
+          <select name="service">
+            <option value="General">I'm looking for...</option>
+            <option value="Website">Website</option>
+            <option value="Ecommerce">Ecommerce</option>
+            <option value="UI/UX">UI/UX</option>
+          </select>
+        </label>
+        <label><textarea name="message" rows="4" placeholder="Describe your project"></textarea></label>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Submit</button>
+          <button type="button" class="btn-ghost" id="modalCancel">Cancel</button>
+        </div>
+        <div id="formStatus" class="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
